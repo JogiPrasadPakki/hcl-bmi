@@ -2,8 +2,8 @@
 
 This project was developed in of HCL hackathon 2025. 
 
-Project Name : HCL BMI Health (Front end)
-Technologies : NextJS, Typescript, MUI, axios, bootstrap, react-query 
+- Project Name : HCL BMI Health (Front end)
+- Technologies : NextJS, Typescript, MUI, axios, bootstrap, react-query 
 
 Application can be accessible from  [This Link](https://hcl-bmi.vercel.app/) hosted on vercel
 
