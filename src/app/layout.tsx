@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "./globals.scss";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import App from "next/app";
+import AppConfig from "@/components/AppConfig";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,12 +23,24 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode;      
 }>) {
+
+  const queryClient = new QueryClient({
+    defaultOptions: {
+      queries: {
+        refetchOnWindowFocus: false,
+        retry: false,
+      },
+    },
+  });
+
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+        <AppConfig>
+           {children}
+        </AppConfig>
       </body>
     </html>
   );
