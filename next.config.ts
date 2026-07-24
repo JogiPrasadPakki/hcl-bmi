@@ -17,7 +17,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/', // The incoming request path
-        destination: '/login', // The home page destination
+        destination: '/home', // The home page destination
         permanent: false, // Use 308 for permanent redirect, 307 for temporary
       },
     ];

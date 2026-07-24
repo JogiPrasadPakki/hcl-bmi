@@ -234,7 +234,7 @@ function EditProfile({open, onClose}:{open:boolean, onClose:()=>void}) {
                                                     <div 
                                                     >
                                                         <label htmlFor="email" className="d-block text-sm font-medium text-gray-700">
-                                                            Height (Inches)
+                                                            Height (cm)
                                                         </label>
                                                         <input
                                                             type="number"
@@ -373,7 +373,7 @@ function UserProfile({onClickEdit}:{onClickEdit:()=>void}) {
                         } />
                     </div>
                      <div className="col-12 col-md-4">
-                         <Labels label="Height" value={user.height+' Inches'} />
+                         <Labels label="Height" value={user.height+' CM'} />
                     </div>
 
                     <div className="col-12 col-md-4">
@@ -384,7 +384,9 @@ function UserProfile({onClickEdit}:{onClickEdit:()=>void}) {
                         <Labels label="BMI" value={`${bmiText.bmi.toFixed(2)} / ${bmiText.bmiCategory}`}/>
                     </div>
                 </div>
-                <div>
+                <div style={{marginTop:"10px"}}>
+                    <h6>Git</h6>
+                    <a href="https://github.com/JogiPrasadPakki/hcl-bmi">https://github.com/JogiPrasadPakki/hcl-bmi</a>
                 </div>
             </div>  
         </Box>

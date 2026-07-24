@@ -8,8 +8,8 @@ import { useState } from "react";
 const UserDefaultProfile={
     first_name:'Jogi prasad',
     last_name:'Pakki',
-    age:27,
-    height:6.8,
+    age:28,
+    height:172,
     weight:70,
     diet_preference:1,
     gender:0
